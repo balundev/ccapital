@@ -1,0 +1,83 @@
+.footer {
+  width: 100vw;
+  height: 30vh;
+  background-color: #474747;
+  .footerContainer {
+    max-width: 1250px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .logo {
+    background-image: url('../../public/logo.png'); /* Make sure the image path is correct */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 15vh;
+    z-index: 1; /* Ensure logo is above the background */
+  }
+  .footer-content-left {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .footer-content-right {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    height: 85%;
+    .socials {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      .scaleEffectFB {
+        color: #ceac65;
+        cursor: pointer;
+        transition: color 0.5s, transform 0.5s;
+
+        &:hover {
+          color: #3b5998;
+          transform: scale(1.3);
+        }
+      }
+      .scaleEffectINS {
+        margin-left: 10px;
+        color: #ceac65;
+        cursor: pointer;
+        transition: color 0.5s, transform 0.5s;
+
+        &:hover {
+          color:  #DD2A7B;
+         
+          transform: scale(1.3);
+        }
+      }
+    }
+    .services {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 1rem;
+        color: #ceac65;
+      }
+      span {
+        color: white;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: color 0.5s, transform 0.5s;
+
+        &:hover {
+          color: #ceac65;
+          transform: scale(1.1);
+        }
+      }
+      
+    }
+  }
+}

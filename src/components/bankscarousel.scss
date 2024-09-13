@@ -1,0 +1,102 @@
+$gold: #ceac65;
+$padding-sides: 10vw;
+$calc-padding-sides: -$padding-sides;
+
+.carouselAbout {
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white; // Change as needed
+  overflow: hidden;
+  flex-direction: column;
+  max-width: 1250px;
+  margin: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  h2 {
+    color: $gold;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative; // Add relative positioning
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .carousel-track {
+    display: flex;
+    position: absolute; // Position absolutely within the carousel wrapper
+    left: $calc-padding-sides; // Adjust to shift content to the right
+    right: $calc-padding-sides; // Adjust to shift content to the left
+    animation: scroll 60s linear infinite;
+  }
+
+  .bank-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 50px; /* Adjust the padding to add space between logos */
+  }
+
+  .bankItem {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 75px;
+    
+  }
+
+  .paribas{
+    background-image: url('../../public/paribas.png'); 
+  }
+  .ing{
+    background-image: url('../../public/ing.png');
+    height: 30px; 
+  }
+  .pekao{
+    background-image: url('../../public/pekao.png'); 
+  }
+  .millenniumbank{
+    background-image: url('../../public/millenniumbank.png'); 
+  }
+  .bosbank{
+    background-image: url('../../public/bosbank.png'); 
+  }
+  .alior{
+    background-image: url('../../public/alior.png'); 
+    height: 50px;
+    width: 200px;
+  }
+  .santander{
+    background-image: url('../../public/santander.png'); 
+  }
+  .mbank {
+    background-image: url('../../public/mbank.png'); 
+    height: 35px;
+  }
+  .city {
+    background-image: url('../../public/city.png');
+  }
+
+
+
+
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - #{$padding-sides * 2})); // Adjust for the padding
+    }
+  }
+}

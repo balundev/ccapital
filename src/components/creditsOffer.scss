@@ -1,0 +1,75 @@
+$dark-gray: #ede9e5;
+$gold: #ceac65;
+
+
+#creditsOffer {
+    height: 60vh;
+    width: 100%;
+    background-color: white;
+    height: 60vh;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: $gold;
+    box-sizing: border-box;
+
+    .creditsOfferContainer {
+        max-width: 1250px;
+        margin: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 5%;
+    }
+
+    .productDesc {
+        color: rgb(107, 107, 107);
+        margin-bottom: 25px;
+    }
+
+    
+    h1 {
+        font-size: 35px;
+        margin-top: 0;
+    }
+
+    .creditCardsContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+    }
+
+    .cardsOffer {
+        width: 310px;
+        height: 250px;
+        border-radius: 25px;
+        height: 45vh;
+        background-color: #ede9e5;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        padding-top: 25px;
+        h3 {
+            color: rgb(73, 73, 73);
+            font-size: 23px;
+            margin:0;
+            height: 10%;
+        }
+        p {
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 55%;
+            margin: 0;
+            color: rgb(128, 128, 128);
+            font-size: smaller;
+        }
+        .iconTopic {
+            height: 3rem;
+            font-size: 50px;
+            color: #DFBE88;
+        }
+    }
+}

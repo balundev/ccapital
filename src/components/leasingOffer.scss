@@ -1,0 +1,136 @@
+$dark-gray: #ede9e5;
+$gold: #ceac65;
+
+#leasingOffer {
+    height: 80vh;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: $gold;
+    box-sizing: border-box;
+
+    .creditsOfferContainer {
+        margin-top: 5%;
+    }
+
+    .productDesc {
+        color: rgb(107, 107, 107);
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-top: 0;
+    }
+
+    .creditCardsContainer {
+        padding: 0;
+    }
+
+    .topRow, .bottomRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    
+
+    .cardsOffer {
+        box-sizing: border-box;
+        margin-bottom: 30px;
+        width: 20%;
+        height: 25vh;
+        border-radius: 25px;
+        background-color: #ede9e5;
+        position: relative;
+        perspective: 1000px;
+        overflow: hidden;
+
+        .inner {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+
+            .front, .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                backface-visibility: hidden;
+                transition: opacity 0.5s, transform 0.5s;
+                border-radius: inherit; /* Ensure rounded corners */
+            }
+
+            .front {
+                z-index: 2;
+                background-color: #ede9e5;
+                padding: 30px;
+                color: #DFBE88;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.5s;
+
+                .iconTopic {
+                    font-size: 50px;
+                    margin-bottom: 10px; /* Adjust spacing if needed */
+                }
+
+                h3 {
+                    color: rgb(73, 73, 73);
+                    font-size: 23px;
+                    margin: 0;
+                }
+            }
+
+            .back {
+                transform: rotateY(180deg);
+                background-color: #ede9e5;
+                padding: 15px;
+                color: rgb(73, 73, 73);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.5s, transform 0.5s;
+
+                .description {
+                    text-align:start;
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+        }
+        transition: 0.5s;
+        &:hover .inner {
+            transform: rotateY(180deg);
+        }
+
+        &:hover .front {
+            opacity: 0;
+        }
+
+        &:hover .back {
+            opacity: 1;
+        }
+        &:hover {
+            box-shadow: 0 2px 12px #ceac65; /* Adjust shadow properties as needed */
+        }
+    }
+}

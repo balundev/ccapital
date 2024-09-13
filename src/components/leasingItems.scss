@@ -1,0 +1,80 @@
+$dark-gray: #ede9e5;
+$gold: #ceac65;
+
+
+#leasingItems {
+    height: 50vh;
+    width: 100%;
+    background-color: #ede9e5;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: $gold;
+    box-sizing: border-box;
+    padding-top: 2%;
+
+    .maxwidthContainer {
+        height: 50vh;
+        max-width: 1250px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: auto;
+    }
+
+
+    .productDesc {
+        color: rgb(107, 107, 107);
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .creditCardsContainer {
+        padding-top: 2%;
+    }
+
+    .firstRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .secondRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .thirdRow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .cardsOffer {
+        width: 30%;
+        height: 80px;
+        box-sizing: border-box;
+        background-color: #ede9e5;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        span {
+            color: rgb(73, 73, 73);
+            font-size: 16px;
+            margin-left: 15px;
+            text-align: center;
+            
+        }
+
+        .iconTopic {
+            height: 4rem;
+            width: 4rem;
+        }
+    }
+}

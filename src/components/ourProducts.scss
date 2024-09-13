@@ -1,0 +1,108 @@
+$dark-gray: #ede9e5;
+$gold: #ceac65;
+
+.readMoreBtn {
+    border-radius: 20px;
+    border: 2px solid $gold;
+    font-weight: bold;
+    width: 180px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#ourProducts {
+    height: 75vh;
+    min-height: 680px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    width: 100vw;
+    max-width: 1250px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: auto;
+    display: flex;
+    color: $gold;
+    box-sizing: border-box;
+    background-color: white;
+    p {
+        color: rgb(78, 78, 78);
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .productDescription {
+        p {
+            text-align: left;
+        }
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-top: 0;
+    }
+ 
+
+    .logoContainer {
+        width: 80%;
+        min-height: 380px;
+        height: 80%;
+        min-width: 380px;
+       
+        background-color: #484747;
+        margin-right: 10%;
+        color:#ceac65;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 25px;
+        p {
+            color:#ceac65;
+            margin:0;
+            font-weight: bold;
+            font-size: 55px;
+        }
+        .descriptionLogo {
+            color: #DFBE88;
+        }
+    }
+
+    .productDesc {
+        color: rgb(107, 107, 107);
+        margin: 0;
+        font-size: 13px;
+        
+    }
+
+    .leftContainer {
+        width: 50%;
+        height: 80%;
+        display: flex;
+        margin-top: 5%;
+    }
+
+    .rightContainer {
+        width: 50%;
+        height: 100%;
+        .productDescription {
+            width: 100%;
+            margin-top: 10%;
+        }
+        .rowParagraph {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            svg {
+                color:#484747;
+                position: absolute;
+            }
+            p {
+                margin:0;
+                text-indent: 2em;
+                text-align: justify;
+            }
+        }
+    }
+}
