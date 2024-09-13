@@ -4,12 +4,19 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward'; // Import the arrow icon
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 const Footer = React.forwardRef((props, ref) => {
-  // State variables for form inputs
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // Handler for navigating back to the homepage
+  const navigateToHomepage = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
-    <footer ref={ref} className="footer">
+    <footer ref={ref} className={isMobile ? 'footer mobile_footer' : 'footer'}>
       <div className="footerContainer">
         <div className="footer-content-left">
           <div className='logo'></div>
@@ -23,30 +30,42 @@ const Footer = React.forwardRef((props, ref) => {
             <span onClick={props.scrollToOurteam}>O nas</span>
             <span onClick={props.scrollContact}>Kontakt</span>
           </div>
-          <div className='socials'>
-            <div style={{ display: 'flex', marginBottom: '15px' }} className="phoneDetail">
-              <PhoneAndroidIcon style={{ fontSize: '35px', marginTop: '5px' }}></PhoneAndroidIcon>
-              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px' }}>
-                <span>+48 665 085 131</span>
-                <span>+48 516 706 699</span>
+          {!isMobile && 
+            <div className='socials'>
+              <div style={{ display: 'flex', marginBottom: '15px' }} className="phoneDetail">
+                <PhoneAndroidIcon style={{ fontSize: '35px', marginTop: '5px' }}></PhoneAndroidIcon>
+                <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px' }}>
+                  <span>+48 665 085 131</span>
+                  <span>+48 516 706 699</span>
+                </div>
+              </div>
+              <div style={{ display: 'flex', marginBottom: '15px' }} className="mailDetail">
+                <MailOutlineIcon style={{ fontSize: '35px', marginTop: '5px' }}></MailOutlineIcon>
+                <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px' }}>
+                  <span>artur.staszkow@collectcapital.pl</span>
+                  <span>kamil.kubowicz@collectcapital.pl</span>
+                </div>
+              </div>
+              <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px', alignSelf: 'baseline'}}>
+                  <FacebookIcon className='scaleEffectFB'></FacebookIcon>
+                  {/* <InstagramIcon className='scaleEffectINS'></InstagramIcon> */}
               </div>
             </div>
-            <div style={{ display: 'flex', marginBottom: '15px' }} className="mailDetail">
-              <MailOutlineIcon style={{ fontSize: '35px', marginTop: '5px' }}></MailOutlineIcon>
-              <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10px' }}>
-                <span>artur.staszkow@collectcapital.pl</span>
-                <span>kamil.kubowicz@collectcapital.pl</span>
-              </div>
-            </div>
-            <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px'}}>
-                <FacebookIcon  className='scaleEffectFB' ></FacebookIcon>
-                {/* <InstagramIcon  className='scaleEffectINS'></InstagramIcon> */}
-            </div>
-          </div>
+          }
         </div>
+
+        {/* Add the arrow for navigation */}
+
+      </div>
+      <div style={{position: 'relative', backgroundColor: 'black', height: '3vh', minHeight: '30px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <p style={{margin: 0, padding: 0}}>Collectcapital Sp. z o.o</p>
+        <KeyboardDoubleArrowUpIcon 
+          className="backToTopArrow" 
+          onClick={navigateToHomepage} 
+        />
       </div>
     </footer>
   );
-})
+});
 
 export default Footer;

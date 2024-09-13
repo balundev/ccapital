@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './leasings.scss';
 import { ReactComponent as DirectionsCarIcon } from '../assets/caricon.svg';
 
 const Leasings = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   return (
-    <section ref={ref} id="leasings">
-      <div className='maxwidthContainer'>
+    <section ref={ref} id="leasings" className={isMobile && 'mobileleasings'}>
+      <div className={isMobile? 'maxwidthContainer maxwidthContainer_mobile' : 'maxwidthContainer'}>
         <div className='leftContainer'>
           <div className='logoContainer'>
             <DirectionsCarIcon style={{ height: '10rem' }}></DirectionsCarIcon>

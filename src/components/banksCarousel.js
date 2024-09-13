@@ -1,10 +1,4 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import React, {useState} from 'react';
 import './bankscarousel.scss';
 
 const banks = [
@@ -42,11 +36,12 @@ const banks = [
 ];
 
 const BanksCarousel = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     return (
       <section ref={ref} id="carousel" className="carouselAbout">
-        <h2>Współpracujemy z wieloma bankami</h2>
+        <h2 style={isMobile ? {fontSize: '25px', textAlign: 'center'} : {}}>Współpracujemy z wieloma bankami</h2>
         <div className="carousel-wrapper">
-          <div className="carousel-track">
+          <div className={isMobile ? 'carousel-track carousel-track_mobile' : 'carousel-track'}>
             {banks.concat(banks).map((bank, index) => (
               <div key={index} className="bank-slide">
                 <div className={bank.class + ' ' + 'bankItem'}></div>

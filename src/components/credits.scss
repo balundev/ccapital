@@ -22,13 +22,33 @@ $gold: #ceac65;
     box-sizing: border-box;
     background-color: $dark-gray;
 
+    &.mobileCredits {
+        height: 100vh;
+
+        .rightContainer {
+            width: 100%;
+            height: 100%;
+            .productDescription {
+                width: 100%;
+                margin-top: 10%;
+            }
+        }
+        h1 {
+            font-size: 30px;
+            
+        }
+    }
+
     .maxwidthContainer {
         max-width: 1250px;
         display: flex;
-        height: 60vh;
+        height: 100%;
         padding-left: 25px;
         margin: auto;
         padding-right: 25px;
+    }
+    .maxwidthContainer_mobile {
+        flex-direction: column;
     }
     p {
         color: rgb(78, 78, 78);

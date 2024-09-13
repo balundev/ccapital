@@ -8,6 +8,10 @@ $gold: #ceac65;
     height: 100vh;
     justify-content: center;
 
+    &.mobile {
+        height: 150vh;
+    }
+
     .offer-container {
         width: 100%;
         height: 20vh;
@@ -16,7 +20,14 @@ $gold: #ceac65;
 
     .items-container {
         height: 20vh;
-
+    }
+    .items-container_mobile {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 25%;
     }
 
     .maxWidthRelative {
@@ -152,6 +163,10 @@ $gold: #ceac65;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+.blur-container_mobile {
+    margin-top: 8vh;
 }
 
 .container-left {

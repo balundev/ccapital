@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './contact.scss';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -6,8 +6,9 @@ import PlaceIcon from '@mui/icons-material/Place';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 const Contact = React.forwardRef((props, ref) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     return (
-        <section ref={ref} id="contact">
+        <section ref={ref} id="contact" className={isMobile && 'contactmobile'}>
 
             <div className="teamContainer">
                 <div className='contactSection'>

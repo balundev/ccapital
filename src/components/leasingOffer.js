@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './leasingOffer.scss';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const LeasingOffer = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const offerData = [
     { title: "Leasing operacyjny", description: "Pozwala wliczyć w koszty uzyskania przychodu nawet pełną ratę leasingową, efektywnie obniżając tym samym podstawę opodatkowania." },
     { title: "Leasing finansowy", description: "Amortyzacja i część odsetkowa raty stanowi koszt uzyskania przychodu, wraz z ostatnią ratą leasingową stajesz się właścicielem przedmiotu." },
@@ -15,14 +16,14 @@ const LeasingOffer = React.forwardRef((props, ref) => {
   ];
 
   return (
-    <section ref={ref} id="leasingOffer">
+    <section ref={ref} id="leasingOffer" className={isMobile && 'leasingOffer_mobile'}>
       <div className='creditsOfferContainer'>
         <div className='productDescription'>
             <span className='productDesc'>Nasze uslugi</span>
             <h1>METODY FINANSOWANIA</h1>
         </div>
         <div className="creditCardsContainer">
-            <div className='topRow'>
+            <div className={isMobile ? 'topRow topRow_mobile' : 'topRow'}>
               {offerData.slice(0, 4).map((offer, index) => (
                 <div key={index} className="cardsOffer">
                   <div className="inner">
@@ -37,7 +38,7 @@ const LeasingOffer = React.forwardRef((props, ref) => {
                 </div>
               ))}
             </div>
-            <div className='bottomRow'>
+            <div className={isMobile ? 'bottomRow bottomRow_mobile' : 'bottomRow'}>
               {offerData.slice(4).map((offer, index) => (
                 <div key={index} className="cardsOffer">
                   <div className="inner">

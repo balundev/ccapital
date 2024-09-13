@@ -21,8 +21,7 @@ import Contact from './components/contact';
 
 function App() {
 
-  const [scrollHeight, setScrollHeight] = useState(0);
-  const [section, setSection] = useState(0)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
 
   const homeRef = useRef(null);
@@ -48,14 +47,14 @@ function App() {
   };
 
   return (
-    <div style={{ width: '100vw' }}>
+    <div style={{ width: '100vw'}}>
       <Helmet>
         <title>Leasing i Kredyty - Polska</title>
         <meta name="description" content="Oferujemy najlepsze rozwiązania leasingowe i kredytowe w Polsce." />
       </Helmet>
       <Header scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollContact={() => scrollToCenter(contact)}  scrollToOurteam={() => scrollToCenter(ourTeam)}/>
       <Home ref={homeRef} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollLeasings={() => scrollToCenter(leasingsOffer)} />
-      <WhoWeAre scrollToOurteam={() => scrollToCenter(ourTeam)}></WhoWeAre>
+      {!isMobile && <WhoWeAre scrollToOurteam={() => scrollToCenter(ourTeam)}></WhoWeAre>}
       <Calculator scrollContact={() => scrollToCenter(contact)}/>
       {/* <About ref={aboutRef}/> */}
       <Credits ref={creditsOffer} />
@@ -65,7 +64,7 @@ function App() {
       <LeasingOffer></LeasingOffer>
       <LeasingItems></LeasingItems>
       <OurProducts ref={ourProducts}></OurProducts>
-      <WorkWithUS></WorkWithUS>
+      {!isMobile && <WorkWithUS></WorkWithUS>}
       <OurTeam ref={ourTeam}></OurTeam>
       <Contact ref={contact}></Contact>
       <Footer ref={footerRef} scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollContact={() => scrollToCenter(contact)}  scrollToOurteam={() => scrollToCenter(ourTeam)}/>

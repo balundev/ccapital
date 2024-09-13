@@ -14,6 +14,13 @@ $gold: #ceac65;
     color: $gold;
     box-sizing: border-box;
 
+    &.leasingOffer_mobile {
+        height: 105vh;
+        h1 {
+            font-size: 30px;
+        }
+    }
+
     .creditsOfferContainer {
         margin-top: 5%;
     }
@@ -39,7 +46,48 @@ $gold: #ceac65;
         width: 100%;
     }
 
-    
+  
+    .topRow_mobile {
+        flex-wrap: wrap;
+        .cardsOffer{
+            width: 48%;
+            margin-bottom: 15px;
+            height: 20vh;
+            .inner {
+                .front {
+                    h3 {
+                        font-size: 15px;
+                    }
+                    .iconTopic {
+                        font-size: 30px;
+                        margin-bottom: 10px; /* Adjust spacing if needed */
+                    }
+                }
+
+            }
+        }
+
+    }
+    .bottomRow_mobile {
+        flex-wrap: wrap;
+        .cardsOffer{
+            width: 48%;
+            margin-bottom: 15px;
+            height: 20vh;
+            .inner {
+                .front {
+                    h3 {
+                        font-size: 15px;
+                    }
+                    .iconTopic {
+                        font-size: 30px;
+                        margin-bottom: 10px; /* Adjust spacing if needed */
+                    }
+                }
+            }
+        }
+
+    }
 
     .cardsOffer {
         box-sizing: border-box;

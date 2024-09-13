@@ -2,6 +2,49 @@
   width: 100vw;
   height: 30vh;
   background-color: #474747;
+  position: relative;
+  // background-image: url('../../public/logo.png');
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+ &.mobile_footer {
+  .logo {
+    width: 80%;
+    height: 50px;
+  }
+ }
+
+ .backToTopArrow {
+  position: absolute;
+  top: -25px;  // Position above the top border
+  right: 10vw; // Position on the right side
+  font-size: 50px; // Adjust the size of the arrow
+  color: #ceac65; // Arrow color, based on your theme
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: shake 5s ease-in-out infinite;
+
+  &:hover {
+    transform: scale(1.3); // Slightly enlarge the arrow on hover
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(5px); // No movement at the start and end
+  }
+  25% {
+    transform: translateY(-5px); // Move up
+  }
+  50% {
+    transform: translateY(5px); // Move down
+  }
+  75% {
+    transform: translateY(-5px); // Move up
+  }
+}
+
   .footerContainer {
     max-width: 1250px;
     padding-left: 25px;

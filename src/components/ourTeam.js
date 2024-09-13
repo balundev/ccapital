@@ -1,13 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ourteam.scss';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import PlaceIcon from '@mui/icons-material/Place';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 
 const OurTeam = React.forwardRef((props, ref) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     return (
-        <section ref={ref} id="ourteam">
+        <section ref={ref} id="ourteam" className={isMobile && 'mobileourteam'}>
 
             <div className="teamContainer">
                 <div className='maxWidthContainer'>
@@ -40,7 +38,7 @@ const OurTeam = React.forwardRef((props, ref) => {
                                     o to, żeby każda podjęta przez Ciebie decyzja była
                                     bezpieczna dla Twojego budżetu.</p>
                             </div>
-                            <div className='businessPhoto'></div>
+                            {!isMobile && <div className='businessPhoto'></div>}
                         </div>
                     </div>
 

@@ -11,6 +11,13 @@ $gold: #ceac65;
     line-height: 1.5;
     color: $gold;
     box-sizing: border-box;
+    &.creditsOffer_mobile {
+        height: 165vh;
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+    }
 
     .creditsOfferContainer {
         max-width: 1250px;
@@ -37,6 +44,13 @@ $gold: #ceac65;
         justify-content: space-between;
         width: 100%;
         padding: 0;
+
+        &.creditCardsContainer_mobile {
+            flex-direction: column;
+            .cardsOffer {
+                margin-top: 20px;
+            }
+        }
     }
 
     .cardsOffer {

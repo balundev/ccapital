@@ -1,18 +1,20 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './creditsOffer.scss';
 import {ReactComponent as DescriptionIcon}from '../assets/document.svg';
 import {ReactComponent as MonetizationOnIcon} from '../assets/handwithmoney.svg';
 import {ReactComponent as PublishedWithChangesIcon} from '../assets/refinansowanie.svg';
 
 const CreditsOffer = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   return (
-    <section ref={ref} id="creditsOffer">
+    <section ref={ref} id="creditsOffer" className={isMobile && 'creditsOffer_mobile'}>
       <div className='creditsOfferContainer'>
         <div className='productDescription'>
-          <span className='productDesc'>Nasze usługi</span>
+          {!isMobile && <span className='productDesc'>Nasze usługi</span>}
+          
           <h1>RODZAJE KREDYTÓW</h1>
         </div>
-        <div className="creditCardsContainer">
+        <div  className={isMobile ? "creditCardsContainer creditCardsContainer_mobile" : "creditCardsContainer"}>
           <div className="cardsOffer">
             <DescriptionIcon className='iconTopic'></DescriptionIcon>
             <h3>Kredyt hipoteczny</h3>

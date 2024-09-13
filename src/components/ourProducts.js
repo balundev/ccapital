@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ourProducts.scss';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { ReactComponent as ImportantDevicesIcon } from '../assets/computerandphone.svg';
 
 const OurProducts = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   return (
-    <section ref={ref} id="ourProducts">
+    <section ref={ref} id="ourProducts" className={isMobile && 'mobileourProducts'}>
       <div className='leftContainer'>
         <div className='logoContainer'>
           <ImportantDevicesIcon style={{ height: '10rem' }}></ImportantDevicesIcon>

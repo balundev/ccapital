@@ -1,73 +1,91 @@
 $dark-gray: #333333;
 $gold: #ceac65;
+
 #calculator {
-    height: 35vh;
-    width: 100vw;
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f6f3ee;
+
+  .contactBTN {
+    width: 450px;
+    border: 3px solid white;
+    border-radius: 25px;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      border: 3px solid $gold;
+      color: $gold;
+      box-shadow: 0 5px 5px rgba(237, 255, 136, 0.1);
+      filter: drop-shadow(0 15px 15px rgba(237, 255, 136, 0.1));
+    }
+  }
+
+  .descriptionHelp {
+    padding: 2%;
+    height: 25vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f6f3ee;
-    .contactBTN {
-      width: 450px;
-      border: 3px solid white;
-      border-radius: 25px;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../../public/marmur.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    p {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .description {
+    height: 40vh;
+    color: black;
+
+    min-width: 900px;
+    width: 75%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+
+    h2 {
+      color: $gold;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .descriptionHelp_mobile {
+    padding: 25px;
+    p {
+      font-size: 1.5rem;
       text-align: center;
-      padding: 8px;
-      cursor: pointer;
-      transition: all 0.5s;
-      &:hover {
-        border: 3px solid $gold;
-        color: $gold;
-        box-shadow: 0 5px 5px rgba(237, 255, 136, 0.1);
-        filter: drop-shadow(0 15px 15px rgba(237, 255, 136, 0.1));
-      }
     }
-    .descriptionHelp {
-      padding: 2%;
-      height: 25vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      background-image: url('../../public/marmur.jpg');
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      p {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 0;
-      }
+    .contactBTN {
+      width: 75%;
+      font-size: 1rem;
     }
-    .description {
-        height: 40vh;
-        color: black;
-        
-        min-width: 900px;
-        width: 75%;
-        padding-left: 5rem;
-        padding-right: 5rem;
-        line-height: 1.6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: justify;
-    
-        h2 {
-          color: $gold;
-          font-weight: bold;
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
-    
-        p {
-          font-size: 1rem;
-          margin-bottom: 1rem;
-        }
-      }
+  }
 }

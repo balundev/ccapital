@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './credits.scss';
 import { ReactComponent as ApartmentIcon } from '../assets/apartments.svg';
 
 const Credits = React.forwardRef((props, ref) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   return (
-    <section ref={ref} id="credits">
-      <div className='maxwidthContainer'>
+    <section ref={ref} id="credits"  className={isMobile && 'mobileCredits'}>
+      <div  className={isMobile? 'maxwidthContainer maxwidthContainer_mobile' : 'maxwidthContainer'}>
       <div className='leftContainer'>
         <div className='logoContainer'>
             <ApartmentIcon style={{fontSize: '10rem'}}></ApartmentIcon>
