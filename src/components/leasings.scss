@@ -13,6 +13,7 @@ $gold: #ceac65;
 
 #leasings {
     height: 60vh;
+    min-height: 500px;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
     background-color: $dark-gray;
@@ -22,8 +23,33 @@ $gold: #ceac65;
     box-sizing: border-box;
     background-color: $dark-gray;
 
+    .logoIcon {
+        height: 10rem;
+    }
+
     &.mobileleasings{
-        height: 115vh;
+        height: 130vh;
+
+        .logoContainer {
+            min-height: 0;
+            min-width: 0;
+            margin:0;
+            p {
+                font-size: 30px 
+            }
+            .logoIcon {
+                height: 6rem;
+            }
+        }
+
+        .leftContainer { 
+            display: flex;
+            justify-content: center;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+
 
         .rightContainer {
             width: 100%;
@@ -36,9 +62,6 @@ $gold: #ceac65;
             }
         }
 
-        .logoContainer {
-            height: 60%;
-        }
 
         h1 {
             text-align: left;

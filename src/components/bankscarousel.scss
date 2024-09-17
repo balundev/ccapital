@@ -40,7 +40,8 @@ $calc-padding-sides: -$padding-sides;
   }
 
   .carousel-track_mobile {
-    animation: scroll 10s linear infinite;
+    animation: scroll 40s linear infinite;
+    left: -2600px;
   }
 
   .bank-slide {

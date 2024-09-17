@@ -10,6 +10,7 @@
 
  &.mobile_footer {
   .logo {
+    align-self: auto;
     width: 80%;
     height: 50px;
   }
@@ -56,6 +57,7 @@
     height: 100%;
   }
   .logo {
+    align-self: baseline;
     background-image: url('../../public/logo.png'); /* Make sure the image path is correct */
     background-position: center;
     background-repeat: no-repeat;

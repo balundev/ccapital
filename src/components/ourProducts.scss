@@ -16,12 +16,42 @@ $gold: #ceac65;
     box-sizing: border-box;
     background-color: white;
 
+    .logoIcon {
+        height: 10rem;
+    }
+
     &.mobileourProducts {
         flex-direction: column;
-        height: 125vh;
+        height: 135vh;
+        min-height: 1200px;
         h1 {
             font-size: 30px;
         }
+
+
+
+        .leftContainer { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+
+            
+        .logoContainer {
+            min-height: 0;
+            min-width: 0;
+            margin: 0;
+            p {
+                font-size: 25px 
+            }
+            .logoIcon {
+                height: 4rem;
+            }
+        }
+        }
+
         .rightContainer {
             width: 100%;
             height: 100%;

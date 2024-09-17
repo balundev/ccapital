@@ -5,6 +5,7 @@ $gold: #ceac65;
 #ourteam {
     height: 100vh;
     background-color: #ede9e5;
+    min-height: 850px;
 
     .teamContainer {
         height: 100%;
@@ -17,7 +18,8 @@ $gold: #ceac65;
     }
 
     &.mobileourteam {
-        height: 120vh;
+        height: 150vh;
+        min-height: 1350px;
         h1 {
             font-size: 30px;
         }

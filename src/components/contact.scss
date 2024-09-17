@@ -7,23 +7,33 @@ height: 70vh;
 background-color: #ede9e5;
     
 &.contactmobile {
-    height: 80vh;
+    height: 100vh;
+    min-height: 850px;
+    h2 {
+        font-size: 22px;
+    }
+    .teamContainer {
+        height: 100%;
+    }
     .contactSection {
-        height: 80vh;
+        height: 100%;
         .contactDetails { 
-            height: 80vh;
+            height: 100%;
         }
         .contactContainer {
             flex-direction: column;
             height: 100%;
+            padding-bottom: 25px;
+         }
+         a {
+            border-radius: 50px;
          }
          .mapPlace {
             width: 100%;
             height: 100%;
             background-color: white;
             min-width: 320px;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-radius: 50px;
         }
      }
 }
@@ -75,6 +85,13 @@ background-color: #ede9e5;
             span {
                 font-size: 13px;
             }
+        }
+        @media only screen and (max-width: 768px) { 
+            .contactContainer {
+                min-width: 0;
+                width: 100%;
+                border-radius: 0;
+             }
         }
     }
 }

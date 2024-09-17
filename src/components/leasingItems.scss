@@ -4,6 +4,7 @@ $gold: #ceac65;
 
 #leasingItems {
     height: 50vh;
+    min-height: 450px;
     width: 100%;
     background-color: #ede9e5;
     font-family: 'Montserrat', sans-serif;
@@ -13,7 +14,8 @@ $gold: #ceac65;
     padding-top: 2%;
 
     &.leasingItems_mobile {
-        height: 58vh;
+        height: 70vh;
+        min-height: 600px;
         h1 {
             font-size: 30px;
         }

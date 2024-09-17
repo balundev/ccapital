@@ -32,12 +32,15 @@ function App() {
   const ourTeam = useRef(null);
   const footerRef = useRef(null);
   const contact = useRef(null)
- 
 
-  const scrollToCenter = (ref) => {
+
+  const scrollToCenter = (ref, isOurTeam) => {
     if (ref && ref.current) {
       let scrollPosition = ref.current.offsetTop + ref.current.offsetHeight / 2 - window.innerHeight / 2;
 
+      if (isOurTeam) {
+        scrollPosition -= window.innerHeight * 0.06;
+      }
 
       window.scrollTo({
         top: scrollPosition,
@@ -47,15 +50,15 @@ function App() {
   };
 
   return (
-    <div style={{ width: '100vw'}}>
+    <div style={{ width: '100vw' }}>
       <Helmet>
-        <title>Leasing i Kredyty - Polska</title>
-        <meta name="description" content="Oferujemy najlepsze rozwiązania leasingowe i kredytowe w Polsce." />
+        <title>Collect Capital</title>
+        <meta name="description" content="Oferujemy najlepsze rozwiązania kredytowe i leasingowe w Polsce." />
       </Helmet>
-      <Header scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollContact={() => scrollToCenter(contact)}  scrollToOurteam={() => scrollToCenter(ourTeam)}/>
-      <Home ref={homeRef} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollLeasings={() => scrollToCenter(leasingsOffer)} />
-      {!isMobile && <WhoWeAre scrollToOurteam={() => scrollToCenter(ourTeam)}></WhoWeAre>}
-      <Calculator scrollContact={() => scrollToCenter(contact)}/>
+      <Header scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer)} scrollContact={() => scrollToCenter(contact)} scrollToOurteam={() => scrollToCenter(ourTeam, true)} />
+      <Home ref={homeRef} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer)} scrollLeasings={() => scrollToCenter(leasingsOffer)} />
+      {!isMobile && <WhoWeAre scrollToOurteam={() => scrollToCenter(ourTeam,true)}></WhoWeAre>}
+      <Calculator scrollContact={() => scrollToCenter(contact)} />
       {/* <About ref={aboutRef}/> */}
       <Credits ref={creditsOffer} />
       <CreditsOffer></CreditsOffer>
@@ -67,7 +70,7 @@ function App() {
       {!isMobile && <WorkWithUS></WorkWithUS>}
       <OurTeam ref={ourTeam}></OurTeam>
       <Contact ref={contact}></Contact>
-      <Footer ref={footerRef} scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer) } scrollContact={() => scrollToCenter(contact)}  scrollToOurteam={() => scrollToCenter(ourTeam)}/>
+      <Footer ref={footerRef} scrollHome={() => scrollToCenter(homeRef)} scrollLeasings={() => scrollToCenter(leasingsOffer)} scrollProducts={() => scrollToCenter(ourProducts)} scrollCredits={() => scrollToCenter(creditsOffer)} scrollContact={() => scrollToCenter(contact)} scrollToOurteam={() => scrollToCenter(ourTeam)} />
     </div>
   );
 }

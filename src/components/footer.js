@@ -18,8 +18,13 @@ const Footer = React.forwardRef((props, ref) => {
   return (
     <footer ref={ref} className={isMobile ? 'footer mobile_footer' : 'footer'}>
       <div className="footerContainer">
-        <div className="footer-content-left">
+        <div className="footer-content-left" style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'space-around', height: '50%', flexDirection: 'column-reverse' }}>
           <div className='logo'></div>
+          {isMobile &&           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px', width: '100%' }}>
+            <a href="https://www.facebook.com/collectcapitalfinanse" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }} target='_blank'><FacebookIcon className='scaleEffectFB' style={{ fontSize: '35px' }}></FacebookIcon></a>
+            <a href="https://www.instagram.com/collect_capital" style={{ color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }} target='_blank'><InstagramIcon className='scaleEffectINS' style={{ fontSize: '35px' }}></InstagramIcon></a>
+          </div>}
+
         </div>
         <div className="footer-content-right">
           <div className='services'>
@@ -30,7 +35,7 @@ const Footer = React.forwardRef((props, ref) => {
             <span onClick={props.scrollToOurteam}>O nas</span>
             <span onClick={props.scrollContact}>Kontakt</span>
           </div>
-          {!isMobile && 
+          {!isMobile &&
             <div className='socials'>
               <div style={{ display: 'flex', marginBottom: '15px' }} className="phoneDetail">
                 <PhoneAndroidIcon style={{ fontSize: '35px', marginTop: '5px' }}></PhoneAndroidIcon>
@@ -46,9 +51,9 @@ const Footer = React.forwardRef((props, ref) => {
                   <span>kamil.kubowicz@collectcapital.pl</span>
                 </div>
               </div>
-              <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px', alignSelf: 'baseline'}}>
-                  <FacebookIcon className='scaleEffectFB'></FacebookIcon>
-                  {/* <InstagramIcon className='scaleEffectINS'></InstagramIcon> */}
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px', alignSelf: 'baseline' }}>
+                <a href="https://www.facebook.com/collectcapitalfinanse" target='_blank'><FacebookIcon className='scaleEffectFB'></FacebookIcon></a>
+                <a href="https://www.instagram.com/collect_capital" target='_blank'><InstagramIcon className='scaleEffectINS'></InstagramIcon></a>
               </div>
             </div>
           }
@@ -57,11 +62,12 @@ const Footer = React.forwardRef((props, ref) => {
         {/* Add the arrow for navigation */}
 
       </div>
-      <div style={{position: 'relative', backgroundColor: 'black', height: '3vh', minHeight: '30px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <p style={{margin: 0, padding: 0}}>Collectcapital Sp. z o.o</p>
-        <KeyboardDoubleArrowUpIcon 
-          className="backToTopArrow" 
-          onClick={navigateToHomepage} 
+      <div style={{ position: 'relative', backgroundColor: 'black', height: '3vh', minHeight: '30px', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ margin: 0, padding: 0 }}>Copyrights &copy; CollectCapital Sp. z o.o</p>
+
+        <KeyboardDoubleArrowUpIcon
+          className="backToTopArrow"
+          onClick={navigateToHomepage}
         />
       </div>
     </footer>

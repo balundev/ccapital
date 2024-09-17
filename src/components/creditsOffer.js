@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './creditsOffer.scss';
 import {ReactComponent as DescriptionIcon}from '../assets/document.svg';
 import {ReactComponent as MonetizationOnIcon} from '../assets/handwithmoney.svg';
-import {ReactComponent as PublishedWithChangesIcon} from '../assets/refinansowanie.svg';
+import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 
 const CreditsOffer = React.forwardRef((props, ref) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -43,7 +43,7 @@ const CreditsOffer = React.forwardRef((props, ref) => {
             </p>
           </div>
           <div className="cardsOffer">
-            <PublishedWithChangesIcon style={{fill: 'red'}} className='iconTopic'></PublishedWithChangesIcon>
+            <CurrencyExchangeIcon style={{height: '50px'}} className='iconTopic'></CurrencyExchangeIcon>
             <h3 style={{height: '22%'}}>Refinansowanie
               kredytu hipotecznego</h3>
             <p style={{height: '59%'}}>Zmieniły się stopy procentowe na

@@ -9,7 +9,7 @@ const OurProducts = React.forwardRef((props, ref) => {
     <section ref={ref} id="ourProducts" className={isMobile && 'mobileourProducts'}>
       <div className='leftContainer'>
         <div className='logoContainer'>
-          <ImportantDevicesIcon style={{ height: '10rem' }}></ImportantDevicesIcon>
+          <ImportantDevicesIcon className='logoIcon'></ImportantDevicesIcon>
           <p className="descriptionLogo">Produkty Firmowe</p>
         </div>
       </div>

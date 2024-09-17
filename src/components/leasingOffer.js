@@ -7,7 +7,7 @@ const LeasingOffer = React.forwardRef((props, ref) => {
   const offerData = [
     { title: "Leasing operacyjny", description: "Pozwala wliczyć w koszty uzyskania przychodu nawet pełną ratę leasingową, efektywnie obniżając tym samym podstawę opodatkowania." },
     { title: "Leasing finansowy", description: "Amortyzacja i część odsetkowa raty stanowi koszt uzyskania przychodu, wraz z ostatnią ratą leasingową stajesz się właścicielem przedmiotu." },
-    { title: "Leasing konsumencki", description: "W przeciwnieństwie do kredytu jest dużo bardziej plastycznym instrumentem finansowym, pozwala ustalić zasady finansowania na Twoich warunkach." },
+    { title: "Leasing konsumencki", description: "W przeciwieństwie do kredytu jest dużo bardziej plastycznym instrumentem finansowym, pozwala ustalić zasady finansowania na Twoich warunkach." },
     { title: "Leasing bez BIK I KRD", description: "Szeroka gama firm leasingowych z którymi współpracujemy pozwala nam finansować klientów z wpisami w bazach." },
     { title: "Leasing zwrotny", description: "Potrzebujesz gotówki i jednocześnie chcesz zachować przedmiot który użytkujesz na codzień? Skorzystaj z leasingu zwrotnego. " },
     { title: "Pożyczkę leasingową", description: "Amortyzacja i część odsetkowa raty stanowią koszty uzyskania przychodu, od razu stajesz się właścicielem przedmiotu." },
@@ -19,7 +19,7 @@ const LeasingOffer = React.forwardRef((props, ref) => {
     <section ref={ref} id="leasingOffer" className={isMobile && 'leasingOffer_mobile'}>
       <div className='creditsOfferContainer'>
         <div className='productDescription'>
-            <span className='productDesc'>Nasze uslugi</span>
+            <span className='productDesc'>Nasze usługi</span>
             <h1>METODY FINANSOWANIA</h1>
         </div>
         <div className="creditCardsContainer">

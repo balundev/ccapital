@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './header.scss';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -67,12 +68,22 @@ function Header({ scrollHome, scrollLeasings, scrollProducts, scrollCredits, scr
                   alignItems: 'center',
                   transition: 'all 0.5s',
                 }}
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/collectcapitalfinanse"
                 target="_blank"
                 rel="noreferrer"
               >
                 <FacebookIcon className="scaleEffectFB" />
               </a>
+              <a style={{
+                textDecoration: 'none',
+                listStyle: 'none',
+                color: 'white',
+                display: 'flex',
+                alignItems: 'center',
+                transition: 'all 0.5s',
+              }} href="https://www.instagram.com/collect_capital" target='_blank'>
+                <InstagramIcon className='scaleEffectINS'>
+                </InstagramIcon></a>
             </div>
           </div>
         )}

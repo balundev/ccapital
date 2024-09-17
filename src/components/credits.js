@@ -9,7 +9,7 @@ const Credits = React.forwardRef((props, ref) => {
       <div  className={isMobile? 'maxwidthContainer maxwidthContainer_mobile' : 'maxwidthContainer'}>
       <div className='leftContainer'>
         <div className='logoContainer'>
-            <ApartmentIcon style={{fontSize: '10rem'}}></ApartmentIcon>
+            <ApartmentIcon  className='logoIcon'></ApartmentIcon>
             <p className="descriptionLogo">Kredyty</p>
         </div>
       </div>

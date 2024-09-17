@@ -9,7 +9,7 @@ const Leasings = React.forwardRef((props, ref) => {
       <div className={isMobile? 'maxwidthContainer maxwidthContainer_mobile' : 'maxwidthContainer'}>
         <div className='leftContainer'>
           <div className='logoContainer'>
-            <DirectionsCarIcon style={{ height: '10rem' }}></DirectionsCarIcon>
+            <DirectionsCarIcon className='logoIcon'></DirectionsCarIcon>
             <p className="descriptionLogo">Leasing</p>
           </div>
         </div>
